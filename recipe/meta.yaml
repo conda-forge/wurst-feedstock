@@ -1,5 +1,5 @@
 {% set name = "wurst" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ddb56c990945a73e42af3773c712e6ca144244d4584b144d0777a309ffe4e40d
+  sha256: efd640ffb68f4d8b667f15f2997ade933f0093bb842dedc27b7be607c9c93a92
 
 build:
   noarch: python
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://github.com/polca/wurst
-  summary: 'Wurst is a python package for linking and modifying industrial ecology models'
+  summary: Wurst is a python package for linking and modifying industrial ecology models
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
