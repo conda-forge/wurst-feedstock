@@ -23,7 +23,7 @@ requirements:
     - setuptools
   run:
     - appdirs
-    - constructive_geometries
+    - constructive_geometries >=0.9.3
     - docopt
     - numpy
     - pandas
