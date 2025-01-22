@@ -1,25 +1,26 @@
 {% set name = "wurst" %}
 {% set version = "0.4" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 91cc659b52e231c2eb62c6f4a2c7e4957c7b3d5736e6547381b198f65c160670
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - wurst-cli = wurst.bin.wurst_cli:main
 
 requirements:
   host:
     - pip
-    - python >=3.4
+    - python {{ python_min }}
     - setuptools
   run:
     - appdirs
@@ -27,7 +28,7 @@ requirements:
     - docopt
     - numpy
     - pandas
-    - python >=3.4
+    - python >={{ python_min }}
     - python-json-logger
     - toolz
     - tqdm
@@ -38,6 +39,7 @@ test:
     - wurst
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - wurst-cli --help
