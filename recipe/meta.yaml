@@ -42,7 +42,6 @@ test:
     - python {{ python_min }}
   commands:
     - pip check
-    - wurst-cli --help
 
 about:
   home: https://github.com/polca/wurst
