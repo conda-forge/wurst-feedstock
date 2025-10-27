@@ -1,5 +1,5 @@
 {% set name = "wurst" %}
-{% set version = "0.4" %}
+{% set version = "0.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 91cc659b52e231c2eb62c6f4a2c7e4957c7b3d5736e6547381b198f65c160670
+  sha256: f686eb87d523ba12286cd455e2a4fb8996b4c816564987d59960e71a15c11bc7
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - wurst-cli = wurst.bin.wurst_cli:main
 
@@ -23,11 +23,11 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - appdirs
     - constructive_geometries >=0.9.4
     - docopt
     - numpy
     - pandas
+    - platformdirs
     - python >={{ python_min }}
     - python-json-logger
     - toolz
@@ -42,7 +42,6 @@ test:
     - python {{ python_min }}
   commands:
     - pip check
-    - wurst-cli --help
 
 about:
   home: https://github.com/polca/wurst
