@@ -23,11 +23,11 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - appdirs
     - constructive_geometries >=0.9.4
     - docopt
     - numpy
     - pandas
+    - platformdirs
     - python >={{ python_min }}
     - python-json-logger
     - toolz
