@@ -1,5 +1,5 @@
 {% set name = "wurst" %}
-{% set version = "0.5" %}
+{% set version = "0.5.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f686eb87d523ba12286cd455e2a4fb8996b4c816564987d59960e71a15c11bc7
+  sha256: 6651cdd3aac50aac6326a5a287172f42d20a100f8712ad9907793a65553d1c3a
 
 build:
   noarch: python
