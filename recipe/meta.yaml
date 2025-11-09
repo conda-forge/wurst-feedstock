@@ -1,5 +1,5 @@
 {% set name = "wurst" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6651cdd3aac50aac6326a5a287172f42d20a100f8712ad9907793a65553d1c3a
+  sha256: 705e1f8ff60d55734c7726debb8af5046aeb4dea790fb7cd4afa34f6dbb7c933
 
 build:
   noarch: python
@@ -30,6 +30,7 @@ requirements:
     - platformdirs
     - python >={{ python_min }}
     - python-json-logger
+    - structlog
     - toolz
     - tqdm
     - wrapt
