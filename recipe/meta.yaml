@@ -30,6 +30,7 @@ requirements:
     - platformdirs
     - python >={{ python_min }}
     - python-json-logger
+    - structlog
     - toolz
     - tqdm
     - wrapt
